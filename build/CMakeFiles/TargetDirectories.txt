@@ -1,0 +1,3 @@
+/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles/dpdk-network-app.dir
+/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles/edit_cache.dir
+/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles/rebuild_cache.dir
