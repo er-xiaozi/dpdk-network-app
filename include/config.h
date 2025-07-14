@@ -13,6 +13,7 @@
 #define ENABLE_MULTHREAD 1
 #define ENABLE_UDP_APP 1
 #define ENABLE_TCP_APP 1
+#define ENABLE_KNI_APP 1
 
 #define NUM_MBUFS (4096 - 1)
 #define BURST_SIZE 32

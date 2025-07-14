@@ -5,6 +5,7 @@
 #include <rte_ether.h>
 #include <rte_malloc.h>
 #include <netinet/in.h>
+#include <rte_arp.h>
 #include "globals.h"
 
 #define ARP_ENTRY_STATUS_DYNAMIC	0

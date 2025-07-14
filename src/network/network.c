@@ -2,7 +2,7 @@
 #include "network.h"
 
 static const struct rte_eth_conf port_conf_default = {
-    .rxmode = {.max_rx_pkt_len = RTE_ETHER_MAX_LEN}};
+    .rxmode = {.max_lro_pkt_size = RTE_ETHER_MAX_LEN}};
 
 void ng_init_port(struct rte_mempool *mbuf_pool) {
     uint16_t nb_sys_ports = rte_eth_dev_count_avail();

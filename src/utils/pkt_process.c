@@ -140,7 +140,7 @@ static int pkt_process(void *arg) {
 					printf(" local: %s , type : %d\n", inet_ntoa(addr), icmphdr->icmp_type);
 				
 
-					struct rte_mbuf *txbuf = ng_send_icmp(mbuf_pool, ehdr->s_addr.addr_bytes,
+					struct rte_mbuf *txbuf = ng_send_icmp(mbuf_pool, ehdr->src_addr.addr_bytes,
 						iphdr->dst_addr, iphdr->src_addr, icmphdr->icmp_ident, icmphdr->icmp_seq_nb);
 
 					//rte_eth_tx_burst(gDpdkPortId, 0, &txbuf, 1);

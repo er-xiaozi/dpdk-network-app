@@ -3,6 +3,7 @@
 #include <rte_mbuf.h>
 #include <rte_malloc.h>
 #include <rte_timer.h>
+#include <rte_kni.h>
 
 #include <stdio.h>
 #include <arpa/inet.h>
@@ -29,6 +30,12 @@ int main(int argc, char *argv[]) {
     if (mbuf_pool == NULL) {
         rte_exit(EXIT_FAILURE, "Could not create mbuf pool\n");
     }
+
+#if ENABLE_KNI_APP
+
+    //rte_kni_init();
+
+#endif
 
     ng_init_port(mbuf_pool);
     rte_eth_macaddr_get(gDpdkPortId, (struct rte_ether_addr *)gSrcMac);
