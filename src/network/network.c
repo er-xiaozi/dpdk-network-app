@@ -35,6 +35,9 @@ void ng_init_port(struct rte_mempool *mbuf_pool) {
     if (rte_eth_dev_start(gDpdkPortId) < 0) {
         rte_exit(EXIT_FAILURE, "Could not start\n");
     }
+#if ENABLE_KNI_APP
+    rte_eth_promiscuous_enable(gDpdkPortId); // 开启混杂模式
+#endif
 }
 
 void print_ethaddr(const char *name, const struct rte_ether_addr *eth_addr) {

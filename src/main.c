@@ -18,6 +18,7 @@
 #include "ring_buffer.h"
 #include "timer.h"
 #include "globals.h"
+#include "kin_app.h"
 
 
 int main(int argc, char *argv[]) {
@@ -32,12 +33,16 @@ int main(int argc, char *argv[]) {
     }
 
 #if ENABLE_KNI_APP
-
-    //rte_kni_init();
-
-#endif
-
+    // kni初始化
+    if(-1 == rte_kni_init(gDpdkPortId)){
+        rte_exit(EXIT_FAILURE, "kni init failed\n");
+    }
     ng_init_port(mbuf_pool);
+    ng_alloc_kni(mbuf_pool);
+#else
+    ng_init_port(mbuf_pool);
+#endif
+    
     rte_eth_macaddr_get(gDpdkPortId, (struct rte_ether_addr *)gSrcMac);
 
     // 初始化各模块
@@ -45,7 +50,7 @@ int main(int argc, char *argv[]) {
     init_timer_subsystem(mbuf_pool);
     
     unsigned lcore_id = rte_lcore_id();
-    printf("main thread lcore id : %d \n", lcore_id);
+    printf("\nmain thread lcore id : %d \n", lcore_id);
     // 启动处理线程
     launch_processing_thread(mbuf_pool);
     

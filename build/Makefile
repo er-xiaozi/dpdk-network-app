@@ -129,6 +129,30 @@ dpdk-network-app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dpdk-network-app.dir/build.make CMakeFiles/dpdk-network-app.dir/build
 .PHONY : dpdk-network-app/fast
 
+src/app/kin_app.o: src/app/kin_app.c.o
+.PHONY : src/app/kin_app.o
+
+# target to build an object file
+src/app/kin_app.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dpdk-network-app.dir/build.make CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o
+.PHONY : src/app/kin_app.c.o
+
+src/app/kin_app.i: src/app/kin_app.c.i
+.PHONY : src/app/kin_app.i
+
+# target to preprocess a source file
+src/app/kin_app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dpdk-network-app.dir/build.make CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.i
+.PHONY : src/app/kin_app.c.i
+
+src/app/kin_app.s: src/app/kin_app.c.s
+.PHONY : src/app/kin_app.s
+
+# target to generate assembly for a file
+src/app/kin_app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dpdk-network-app.dir/build.make CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.s
+.PHONY : src/app/kin_app.c.s
+
 src/app/tcp_app.o: src/app/tcp_app.c.o
 .PHONY : src/app/tcp_app.o
 
@@ -378,6 +402,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dpdk-network-app"
+	@echo "... src/app/kin_app.o"
+	@echo "... src/app/kin_app.i"
+	@echo "... src/app/kin_app.s"
 	@echo "... src/app/tcp_app.o"
 	@echo "... src/app/tcp_app.i"
 	@echo "... src/app/tcp_app.s"

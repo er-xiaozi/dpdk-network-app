@@ -115,7 +115,7 @@ static int pkt_process(void *arg) {
 #if ENABLE_TCP_APP
 
 			if (iphdr->next_proto_id == IPPROTO_TCP) {
-				printf("ng_tcp_process\n");
+				//printf("ng_tcp_process\n");
 				ng_tcp_process(mbufs[i]);
 				
 			}
@@ -295,7 +295,7 @@ int ng_tcp_process(struct rte_mbuf *tcpmbuf) {
 	struct ng_tcp_stream *stream = ng_tcp_stream_search(iphdr->src_addr, iphdr->dst_addr, 
 		tcphdr->src_port, tcphdr->dst_port);
 	if (stream == NULL) { 
-		printf("TCP proccess :stream == NULL\n");
+		//printf("TCP proccess :stream == NULL\n");
 		return -2;
 	}
 

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lwj/Desktop/DPDK/dpdk-network-app/src/app/kin_app.c" "CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o" "gcc" "CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o.d"
   "/home/lwj/Desktop/DPDK/dpdk-network-app/src/app/tcp_app.c" "CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o" "gcc" "CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o.d"
   "/home/lwj/Desktop/DPDK/dpdk-network-app/src/app/udp_app.c" "CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o" "gcc" "CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o.d"
   "/home/lwj/Desktop/DPDK/dpdk-network-app/src/main.c" "CMakeFiles/dpdk-network-app.dir/src/main.c.o" "gcc" "CMakeFiles/dpdk-network-app.dir/src/main.c.o.d"

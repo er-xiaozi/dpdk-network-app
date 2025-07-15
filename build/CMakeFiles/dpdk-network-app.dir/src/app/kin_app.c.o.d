@@ -1,7 +1,9 @@
-CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
- /home/lwj/Desktop/DPDK/dpdk-network-app/src/main.c \
- /usr/include/stdc-predef.h /usr/local/include/rte_eal.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o: \
+ /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/kin_app.c \
+ /usr/include/stdc-predef.h \
+ /home/lwj/Desktop/DPDK/dpdk-network-app/include/kin_app.h \
+ /usr/local/include/rte_kni.h /usr/local/include/rte_compat.h \
+ /usr/local/include/rte_pci.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -10,52 +12,11 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/time.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endianness.h \
- /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/local/include/rte_config.h /usr/local/include/rte_build_config.h \
- /usr/local/include/rte_compat.h /usr/local/include/rte_per_lcore.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
- /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
- /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
- /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /usr/local/include/rte_uuid.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h /usr/include/string.h \
- /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/local/include/rte_pci_dev_feature_defs.h \
- /usr/local/include/rte_ethdev.h /usr/local/include/rte_cman.h \
- /usr/local/include/rte_bitops.h /usr/local/include/rte_debug.h \
- /usr/local/include/rte_log.h /usr/include/stdio.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
@@ -66,22 +27,65 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /usr/local/include/rte_common.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/inttypes.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endianness.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+ /usr/local/include/rte_ether.h /usr/local/include/rte_random.h \
+ /usr/local/include/rte_mbuf.h /usr/local/include/rte_common.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/local/include/rte_os.h /usr/include/x86_64-linux-gnu/sys/queue.h \
- /usr/local/include/rte_branch_prediction.h /usr/local/include/rte_log.h \
- /usr/local/include/rte_interrupts.h /usr/local/include/rte_epoll.h \
- /usr/local/include/rte_dev.h /usr/local/include/rte_devargs.h \
- /usr/local/include/rte_errno.h /usr/local/include/rte_power_intrinsics.h \
- /usr/local/include/generic/rte_power_intrinsics.h \
- /usr/include/inttypes.h /usr/local/include/rte_spinlock.h \
+ /usr/local/include/rte_config.h /usr/local/include/rte_build_config.h \
+ /usr/local/include/rte_os.h /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+ /usr/include/x86_64-linux-gnu/sys/queue.h \
+ /usr/local/include/rte_mempool.h /usr/local/include/rte_spinlock.h \
  /usr/local/include/generic/rte_spinlock.h /usr/local/include/rte_lcore.h \
+ /usr/local/include/rte_per_lcore.h /usr/include/pthread.h \
+ /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+ /usr/local/include/rte_eal.h /usr/local/include/rte_uuid.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h /usr/include/string.h \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/local/include/rte_pci_dev_feature_defs.h \
  /usr/local/include/rte_launch.h /usr/local/include/rte_thread.h \
  /usr/local/include/rte_pause.h /usr/local/include/generic/rte_pause.h \
  /usr/include/assert.h /usr/local/include/rte_atomic.h \
@@ -90,15 +94,7 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
@@ -109,17 +105,13 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/local/include/rte_branch_prediction.h \
  /usr/local/include/rte_common.h /usr/local/include/rte_pause.h \
  /usr/local/include/rte_cycles.h /usr/local/include/generic/rte_cycles.h \
- /usr/local/include/rte_ethdev_trace_fp.h \
- /usr/local/include/rte_trace_point.h \
- /usr/local/include/rte_branch_prediction.h \
- /usr/local/include/rte_cycles.h /usr/local/include/rte_string_fns.h \
- /usr/local/include/rte_dev_info.h /usr/local/include/rte_eth_ctrl.h \
- /usr/local/include/rte_ether.h /usr/local/include/rte_random.h \
- /usr/local/include/rte_mbuf.h /usr/local/include/rte_mempool.h \
- /usr/local/include/rte_ring.h /usr/local/include/rte_ring_core.h \
- /usr/local/include/rte_memory.h /usr/local/include/rte_fbarray.h \
+ /usr/local/include/rte_debug.h /usr/local/include/rte_log.h \
+ /usr/local/include/rte_branch_prediction.h /usr/local/include/rte_ring.h \
+ /usr/local/include/rte_ring_core.h /usr/local/include/rte_memory.h \
+ /usr/local/include/rte_bitops.h /usr/local/include/rte_fbarray.h \
  /usr/local/include/rte_rwlock.h /usr/local/include/generic/rte_rwlock.h \
  /usr/local/include/rte_spinlock.h /usr/local/include/rte_memzone.h \
  /usr/local/include/rte_ring_elem.h \
@@ -219,14 +211,23 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/ammintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/xopintrin.h \
  /usr/local/include/rte_mempool_trace_fp.h \
- /usr/local/include/rte_prefetch.h \
+ /usr/local/include/rte_trace_point.h /usr/local/include/rte_cycles.h \
+ /usr/local/include/rte_string_fns.h /usr/local/include/rte_prefetch.h \
  /usr/local/include/generic/rte_prefetch.h \
  /usr/local/include/rte_mbuf_ptype.h /usr/local/include/rte_mbuf_core.h \
  /usr/local/include/rte_byteorder.h \
  /usr/local/include/generic/rte_byteorder.h \
- /usr/local/include/rte_byteorder_64.h /usr/local/include/rte_flow.h \
- /usr/local/include/rte_icmp.h /usr/local/include/rte_ip.h \
- /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/local/include/rte_byteorder_64.h \
+ /usr/local/include/rte_kni_common.h /usr/local/include/rte_ethdev.h \
+ /usr/local/include/rte_cman.h /usr/local/include/rte_log.h \
+ /usr/local/include/rte_interrupts.h /usr/local/include/rte_epoll.h \
+ /usr/local/include/rte_dev.h /usr/local/include/rte_devargs.h \
+ /usr/local/include/rte_errno.h /usr/local/include/rte_power_intrinsics.h \
+ /usr/local/include/generic/rte_power_intrinsics.h \
+ /usr/local/include/rte_ethdev_trace_fp.h \
+ /usr/local/include/rte_dev_info.h /usr/local/include/rte_eth_ctrl.h \
+ /usr/local/include/rte_flow.h /usr/local/include/rte_icmp.h \
+ /usr/local/include/rte_ip.h /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
@@ -253,21 +254,7 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.o: \
  /usr/local/include/rte_l2tpv2.h /usr/local/include/rte_ppp.h \
  /usr/local/include/rte_gre.h /usr/local/include/rte_macsec.h \
  /usr/local/include/rte_ethdev.h /usr/local/include/rte_ethdev_core.h \
- /usr/local/include/rte_malloc.h /usr/local/include/rte_timer.h \
- /usr/local/include/rte_kni.h /usr/local/include/rte_pci.h \
- /usr/local/include/rte_kni_common.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/config.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/network.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/arp.h \
- /usr/local/include/rte_arp.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/globals.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/config.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/icmp.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/udp_app.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/tcp_app.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/pkt_process.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/ring_buffer.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/timer.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/globals.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/kin_app.h \
+ /usr/local/include/rte_malloc.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/network.h

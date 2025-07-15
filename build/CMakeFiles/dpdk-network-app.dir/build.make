@@ -69,10 +69,24 @@ include CMakeFiles/dpdk-network-app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/dpdk-network-app.dir/flags.make
 
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o: ../src/app/kin_app.c
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o -MF CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/kin_app.c
+
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/kin_app.c > CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.i
+
+CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/kin_app.c -o CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.s
+
 CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o: ../src/app/tcp_app.c
 CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o -MF CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/tcp_app.c
 
 CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o: ../src/app/udp_app.c
 CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o -MF CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/app/udp_app.c
 
 CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/main.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/main.c.o: ../src/main.c
 CMakeFiles/dpdk-network-app.dir/src/main.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/dpdk-network-app.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/dpdk-network-app.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/main.c.o -MF CMakeFiles/dpdk-network-app.dir/src/main.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/main.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/main.c
 
 CMakeFiles/dpdk-network-app.dir/src/main.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/dpdk-network-app.dir/src/main.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/network/network.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/network/network.c.o: ../src/network/network.c
 CMakeFiles/dpdk-network-app.dir/src/network/network.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/dpdk-network-app.dir/src/network/network.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/dpdk-network-app.dir/src/network/network.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/network/network.c.o -MF CMakeFiles/dpdk-network-app.dir/src/network/network.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/network/network.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/network/network.c
 
 CMakeFiles/dpdk-network-app.dir/src/network/network.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/dpdk-network-app.dir/src/network/network.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o: ../src/protocol/arp.c
 CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o -MF CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/protocol/arp.c
 
 CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/dpdk-network-app.dir/src/protocol/arp.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o: ../src/protocol/icmp.c
 CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o -MF CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/protocol/icmp.c
 
 CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/dpdk-network-app.dir/src/protocol/icmp.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o: ../src/utils/globals.c
 CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o -MF CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/utils/globals.c
 
 CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/dpdk-network-app.dir/src/utils/globals.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o: ../src/utils/pkt_process.c
 CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o -MF CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/utils/pkt_process.c
 
 CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o: ../src/utils/ring_buffer.c
 CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o -MF CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/utils/ring_buffer.c
 
 CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.s: cmake_force
 CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o: CMakeFiles/dpdk-network-app.dir/flags.make
 CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o: ../src/utils/timer.c
 CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o: CMakeFiles/dpdk-network-app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o -MF CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o.d -o CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o -c /home/lwj/Desktop/DPDK/dpdk-network-app/src/utils/timer.c
 
 CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.i: cmake_force
@@ -211,6 +225,7 @@ CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.s: cmake_force
 
 # Object files for target dpdk-network-app
 dpdk__network__app_OBJECTS = \
+"CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o" \
 "CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o" \
 "CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o" \
 "CMakeFiles/dpdk-network-app.dir/src/main.c.o" \
@@ -225,6 +240,7 @@ dpdk__network__app_OBJECTS = \
 # External object files for target dpdk-network-app
 dpdk__network__app_EXTERNAL_OBJECTS =
 
+dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/main.c.o
@@ -237,7 +253,7 @@ dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/utils/ring_buffer.c.o
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/src/utils/timer.c.o
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/build.make
 dpdk-network-app: CMakeFiles/dpdk-network-app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable dpdk-network-app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lwj/Desktop/DPDK/dpdk-network-app/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable dpdk-network-app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dpdk-network-app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

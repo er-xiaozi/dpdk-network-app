@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o"
+  "CMakeFiles/dpdk-network-app.dir/src/app/kin_app.c.o.d"
   "CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o"
   "CMakeFiles/dpdk-network-app.dir/src/app/tcp_app.c.o.d"
   "CMakeFiles/dpdk-network-app.dir/src/app/udp_app.c.o"

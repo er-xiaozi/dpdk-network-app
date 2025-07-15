@@ -19,6 +19,8 @@
 
 #define DEFAULT_FD_NUM	3
 
+#define MAX_PACKET_SIZE 4096
+
 
 // 链表操作宏
 #define LL_ADD(item, list) do { \
