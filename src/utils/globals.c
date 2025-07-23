@@ -12,6 +12,11 @@ uint8_t gSrcMac[RTE_ETHER_ADDR_LEN];
 uint8_t gDefaultArpMac[RTE_ETHER_ADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 #endif
 
+#if ENABLE_KNI_APP
+	struct rte_kni *global_kni = NULL;
+#endif
+
+
 uint8_t fd_table[MAX_FD_COUNT / 8] = {0}; 
 int gDpdkPortId = 0;
 unsigned lcore_id = 0; 

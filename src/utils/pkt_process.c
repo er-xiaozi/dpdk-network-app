@@ -26,133 +26,50 @@ static int pkt_process(void *arg) {
 
 			struct rte_ether_hdr *ehdr = rte_pktmbuf_mtod(mbufs[i], struct rte_ether_hdr*);
 
-#if ENABLE_ARP
+			if (ehdr->ether_type == rte_cpu_to_be_16(RTE_ETHER_TYPE_IPV4)) {
 
-			if (ehdr->ether_type == rte_cpu_to_be_16(RTE_ETHER_TYPE_ARP)) {
-
-				struct rte_arp_hdr *ahdr = rte_pktmbuf_mtod_offset(mbufs[i], 
-					struct rte_arp_hdr *, sizeof(struct rte_ether_hdr));
-
-				/*
-				struct in_addr addr;
-				addr.s_addr = ahdr->arp_data.arp_tip;
-				printf("arp ---> src: %s ", inet_ntoa(addr));
-
-				addr.s_addr = gLocalIp;
-				printf(" local: %s \n", inet_ntoa(addr));
-				*/
-				
-				if (ahdr->arp_data.arp_tip == gLocalIp) {
-
-					if (ahdr->arp_opcode == rte_cpu_to_be_16(RTE_ARP_OP_REQUEST)) {
-
-						//printf("arp --> request\n");
-
-						struct rte_mbuf *arpbuf = ng_send_arp(mbuf_pool, RTE_ARP_OP_REPLY, ahdr->arp_data.arp_sha.addr_bytes, 
-							ahdr->arp_data.arp_tip, ahdr->arp_data.arp_sip);
-
-						//rte_eth_tx_burst(gDpdkPortId, 0, &arpbuf, 1);
-						//rte_pktmbuf_free(arpbuf);
-
-						rte_ring_mp_enqueue_burst(ring->out, (void**)&arpbuf, 1, NULL);
-
-					} else if (ahdr->arp_opcode == rte_cpu_to_be_16(RTE_ARP_OP_REPLY)) {
-
-						//printf("arp --> reply\n");
-
-						struct arp_table *table = arp_table_instance();
-
-						uint8_t *hwaddr = ng_get_dst_macaddr(ahdr->arp_data.arp_sip);
-						if (hwaddr == NULL) {
-
-							struct arp_entry *entry = rte_malloc("arp_entry",sizeof(struct arp_entry), 0);
-							if (entry) {
-								memset(entry, 0, sizeof(struct arp_entry));
-
-								entry->ip = ahdr->arp_data.arp_sip;
-								rte_memcpy(entry->hwaddr, ahdr->arp_data.arp_sha.addr_bytes, RTE_ETHER_ADDR_LEN);
-								entry->type = 0;
-								
-								LL_ADD(entry, table->entries);
-								table->count ++;
-							}
-
-						}
-#if 0 //ENABLE_DEBUG
-						struct arp_entry *iter;
-						for (iter = table->entries; iter != NULL; iter = iter->next) {
-					
-							struct in_addr addr;
-							addr.s_addr = iter->ip;
-
-							print_ethaddr("arp table --> mac: ", (struct rte_ether_addr *)iter->hwaddr);
-								
-							printf(" ip: %s \n", inet_ntoa(addr));
-					
-						}
-#endif
-						rte_pktmbuf_free(mbufs[i]);
-					}
-				
-					continue;
-				} 
-			}
-#endif
-
-			if (ehdr->ether_type != rte_cpu_to_be_16(RTE_ETHER_TYPE_IPV4)) {
-				continue;
-			}
-
-			struct rte_ipv4_hdr *iphdr =  rte_pktmbuf_mtod_offset(mbufs[i], struct rte_ipv4_hdr *, 
+				struct rte_ipv4_hdr *iphdr =  rte_pktmbuf_mtod_offset(mbufs[i], struct rte_ipv4_hdr *, 
 				sizeof(struct rte_ether_hdr));
-			
-			if (iphdr->next_proto_id == IPPROTO_UDP) {
 
-				udp_process(mbufs[i]);
 				
-			}
-
-#if ENABLE_TCP_APP
-
-			if (iphdr->next_proto_id == IPPROTO_TCP) {
-				//printf("ng_tcp_process\n");
-				ng_tcp_process(mbufs[i]);
+#if 1 // arp table
 				
-			}
-
+				ng_arp_entry_insert(iphdr->src_addr, ehdr->src_addr.addr_bytes);
+				
 #endif
+			
+				if (iphdr->next_proto_id == IPPROTO_UDP) {
 
-#if ENABLE_ICMP
+					udp_process(mbufs[i]);
+					// 53 --> 
+					// 
+					
+				} else if (iphdr->next_proto_id == IPPROTO_TCP) {
 
-			if (iphdr->next_proto_id == IPPROTO_ICMP) {
+					ng_tcp_process(mbufs[i]);
+					
+				} else {
 
-				struct rte_icmp_hdr *icmphdr = (struct rte_icmp_hdr *)(iphdr + 1);
+					rte_kni_tx_burst(global_kni, mbufs, num_recvd);
+					
+					printf("tcp/udp --> rte_kni_handle_request\n");
+
+				}
 
 				
-				struct in_addr addr;
-				addr.s_addr = iphdr->src_addr;
-				printf("icmp ---> src: %s ", inet_ntoa(addr));
+			} else {
+			// ifconfig vEth0 192.168.0.119 up
 
+				rte_kni_tx_burst(global_kni, mbufs, num_recvd);
 				
-				if (icmphdr->icmp_type == RTE_IP_ICMP_ECHO_REQUEST) {
-
-					addr.s_addr = iphdr->dst_addr;
-					printf(" local: %s , type : %d\n", inet_ntoa(addr), icmphdr->icmp_type);
-				
-
-					struct rte_mbuf *txbuf = ng_send_icmp(mbuf_pool, ehdr->src_addr.addr_bytes,
-						iphdr->dst_addr, iphdr->src_addr, icmphdr->icmp_ident, icmphdr->icmp_seq_nb);
-
-					//rte_eth_tx_burst(gDpdkPortId, 0, &txbuf, 1);
-					//rte_pktmbuf_free(txbuf);
-					rte_ring_mp_enqueue_burst(ring->out, (void**)&txbuf, 1, NULL);
-
-					rte_pktmbuf_free(mbufs[i]);
-				}				
+				printf("ip --> rte_kni_handle_request\n");
 
 			}
-#endif			
+
+			
 		}
+
+		rte_kni_handle_request(global_kni);
 
 #if ENABLE_UDP_APP
 
@@ -171,6 +88,7 @@ static int pkt_process(void *arg) {
 
 	return 0;
 }
+
 
 
 void launch_processing_thread(struct rte_mempool *mbuf_pool) {
@@ -203,8 +121,6 @@ void process_packets(struct rte_mempool *mbuf_pool) {
         }
     }
 }
-
-
 
 
 int udp_process(struct rte_mbuf *udpmbuf) {

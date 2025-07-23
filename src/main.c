@@ -33,14 +33,14 @@ int main(int argc, char *argv[]) {
     }
 
 #if ENABLE_KNI_APP
-    // kni初始化
-    if(-1 == rte_kni_init(gDpdkPortId)){
-        rte_exit(EXIT_FAILURE, "kni init failed\n");
-    }
-    ng_init_port(mbuf_pool);
-    ng_alloc_kni(mbuf_pool);
-#else
-    ng_init_port(mbuf_pool);
+	if (-1 == rte_kni_init(gDpdkPortId)) {
+		rte_exit(EXIT_FAILURE, "kni init failed\n");
+	}
+	ng_init_port(mbuf_pool);
+	// kni_alloc
+	global_kni = ng_alloc_kni(mbuf_pool);
+#else	
+	ng_init_port(mbuf_pool);
 #endif
     
     rte_eth_macaddr_get(gDpdkPortId, (struct rte_ether_addr *)gSrcMac);

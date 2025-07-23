@@ -53,6 +53,10 @@ extern struct ng_tcp_table *tInst;
 extern int gDpdkPortId;
 extern unsigned lcore_id;
 
+#if ENABLE_KNI_APP
+	extern struct rte_kni *global_kni;
+#endif
+
 // 数据结构定义
 struct offload {
     uint32_t sip;

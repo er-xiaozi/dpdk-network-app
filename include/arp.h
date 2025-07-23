@@ -1,11 +1,13 @@
-#ifndef __NG_ARP_H__
-#define __NG_ARP_H__
-
+//#ifndef __NG_ARP_H__
+//#define __NG_ARP_H__
+#pragma once
 #include <arpa/inet.h> 
 #include <rte_ether.h>
 #include <rte_malloc.h>
 #include <netinet/in.h>
 #include <rte_arp.h>
+#include <pthread.h>
+#include <rte_spinlock.h> //自旋锁
 #include "globals.h"
 
 #define ARP_ENTRY_STATUS_DYNAMIC	0
@@ -29,7 +31,7 @@ struct arp_table {
 
 	struct arp_entry *entries;
 	int count;
-
+    //pthread_spinlock_t spinlock;
 };
 
 
@@ -105,7 +107,15 @@ static int add_static_arp_entry(uint32_t ip, uint8_t *mac) {
     
     return 0;
 }
+
+
+
+int ng_arp_entry_insert(uint32_t ip, uint8_t *mac) ;
+
+
 struct rte_mbuf *ng_send_arp(struct rte_mempool *mbuf_pool, uint16_t opcode, uint8_t *dst_mac, uint32_t sip, uint32_t dip);
-#endif
+
+
+//#endif
 
 

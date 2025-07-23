@@ -22,3 +22,5 @@ find /lib/modules/$(uname -r) -name rte_kni.ko
 手动加载kni
 sudo insmod /lib/modules/6.8.0-60-generic/extra/dpdk/rte_kni.ko
 ls /dev/kni -l
+
+sudo ifconfig vEth0 192.168.141.145 up

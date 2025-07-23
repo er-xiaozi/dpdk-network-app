@@ -58,3 +58,30 @@ struct rte_mbuf *ng_send_arp(struct rte_mempool *mbuf_pool, uint16_t opcode, uin
 
 
 
+int ng_arp_entry_insert(uint32_t ip, uint8_t *mac) {
+
+	struct arp_table *table = arp_table_instance();
+
+	uint8_t *hwaddr = ng_get_dst_macaddr(ip);
+	if (hwaddr == NULL) {
+
+		struct arp_entry *entry = rte_malloc("arp_entry",sizeof(struct arp_entry), 0);
+		if (entry) {
+			memset(entry, 0, sizeof(struct arp_entry));
+
+			entry->ip = ip;
+			rte_memcpy(entry->hwaddr, mac, RTE_ETHER_ADDR_LEN);
+			entry->type = 0;
+
+			//pthread_spin_lock(&table->spinlock);
+			LL_ADD(entry, table->entries);
+			table->count ++;
+			//pthread_spin_unlock(&table->spinlock);
+			
+		}
+
+		return 1; //
+	}
+
+	return 0;
+}

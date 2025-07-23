@@ -2,6 +2,10 @@
 #define __PKT_PROCESS_H__
 
 #include <rte_mempool.h>
+#include <rte_kni.h>
+#include "config.h"
+#include "globals.h"
+
 
 void launch_processing_thread(struct rte_mempool *mbuf_pool);
 void process_packets(struct rte_mempool *mbuf_pool);

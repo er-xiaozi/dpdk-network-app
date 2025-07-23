@@ -50,7 +50,7 @@ target_include_directories(dpdk-network-app PRIVATE
 # --------------------------
 # 链接配置
 # --------------------------
-target_link_libraries(dpdk-network-app PRIVATE ${RTE_LIBRARIES})
+target_link_libraries(dpdk-network-app PRIVATE ${RTE_LIBRARIES} pthread)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--as-needed")
 
 # 自动生成构建目录

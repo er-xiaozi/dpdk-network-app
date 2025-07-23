@@ -219,6 +219,11 @@ CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o: \
  /usr/local/include/generic/rte_byteorder.h \
  /usr/local/include/rte_byteorder_64.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/pkt_process.h \
+ /usr/local/include/rte_kni.h /usr/local/include/rte_pci.h \
+ /usr/local/include/rte_kni_common.h \
+ /home/lwj/Desktop/DPDK/dpdk-network-app/include/config.h \
+ /home/lwj/Desktop/DPDK/dpdk-network-app/include/globals.h \
+ /usr/local/include/rte_malloc.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/arp.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
@@ -238,10 +243,7 @@ CMakeFiles/dpdk-network-app.dir/src/utils/pkt_process.c.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/socket2.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/local/include/rte_malloc.h \
- /usr/local/include/rte_arp.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/globals.h \
- /home/lwj/Desktop/DPDK/dpdk-network-app/include/config.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/local/include/rte_arp.h \
  /home/lwj/Desktop/DPDK/dpdk-network-app/include/icmp.h \
  /usr/local/include/rte_ip.h /usr/include/netinet/ip.h \
  /usr/include/netinet/ip6.h /usr/local/include/rte_icmp.h \
